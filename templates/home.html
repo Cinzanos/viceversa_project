@@ -1,6 +1,10 @@
 <h1>Vice Versa</h1>
-<form>
+<form action="{% url 'reverse' %}">
     <textarea cols="50" rows="10" name="usertext"></textarea>
     <br><br>
-    <input type="submit" value="Reverse">
+    <input type="submit" value="Reverse!">
 </form>
+<!-- Такой путь когда мы исполузуем avtion=reverse не очень хорошо
+ потому что если мы захотим изменить путь в urls.py место reverse/ на reversed/ то будет возникать ошибка
+ чтобы ее не было лучше указать так: action="{% url 'reverse' %}" а в 
+ urls.py добавить name='reverse'-->
